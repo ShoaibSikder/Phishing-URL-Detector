@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hybrid Phishing URL Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hybrid Phishing URL Detector</h1>
+
+        <div id="modelAccuracy" class="accuracy"></div>
+
+        <input type="text" id="urlInput" placeholder="Enter URL here">
+        <button id="checkBtn">Check URL</button>
+
+        <div id="result" class="result"></div>
+        <div id="bdWarning" class="bd-warning"></div>
+
+        <h3>Probability</h3>
+
+        <div class="probability-bar">
+            <span>Legitimate</span>
+            <div class="bar">
+                <div id="probLegit"></div>
+            </div>
+        </div>
+
+        <div class="probability-bar">
+            <span>Phishing</span>
+            <div class="bar">
+                <div id="probPhish"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- uvicorn app:app --reload --host 0.0.0.0 --port 8000 -->
+<!-- uvicorn app:app --reload --host 127.0.0.1 --port 8000 -->
