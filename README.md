@@ -72,8 +72,7 @@ The dataset is preprocessed to train the ML model used in this project.
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/<your-username>/Hybrid-Phishing-URL-Detector.git
-cd Hybrid-Phishing-URL-Detector
+https://github.com/ShoaibSikder/Phishing-URL-Detector.git
 ```
 
 2. **Set up Python environment:**
