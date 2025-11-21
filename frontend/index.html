@@ -2,45 +2,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hybrid Phishing URL Detector</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Phishing URL Detector</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <div class="container">
-        <h1>Hybrid Phishing URL Detector</h1>
+        <header>
+            <h1>Phishing URL Detector</h1>
+            <div id="modelAccuracy" class="accuracy">Loading accuracy...</div>
+        </header>
 
-        <div id="modelAccuracy" class="accuracy"></div>
+        <section class="check">
+            <input type="text" id="urlInput" placeholder="Enter URL here" />
+            <button id="checkBtn">Check URL</button>
+            <div id="result" class="result"></div>
+            <div id="bdWarning" class="bd-warning"></div>
 
-        <input type="text" id="urlInput" placeholder="Enter URL here">
-        <button id="checkBtn">Check URL</button>
-
-        <div id="result" class="result"></div>
-        <div id="bdWarning" class="bd-warning"></div>
-
-        <h3>Probability</h3>
-
-        <div class="probability-bar">
-            <span>Legitimate</span>
-            <div class="bar">
-                <div id="probLegit"></div>
+            <h3>Probability</h3>
+            <div class="probability-bar">
+                <span>Legitimate</span>
+                <div class="bar">
+                    <div id="probLegit" class="fill"></div>
+                </div>
             </div>
-        </div>
 
-        <div class="probability-bar">
-            <span>Phishing</span>
-            <div class="bar">
-                <div id="probPhish"></div>
+            <div class="probability-bar">
+                <span>Phishing</span>
+                <div class="bar">
+                    <div id="probPhish" class="fill"></div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section class="charts">
+            <div class="card">
+                <h3>Confusion Matrix</h3>
+                <canvas id="confMatrixChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h3>ROC Curve</h3>
+                <canvas id="rocChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h3>Precision - Recall Curve</h3>
+                <canvas id="prChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h3>Top Feature Importances</h3>
+                <canvas id="fiChart"></canvas>
+            </div>
+        </section>
     </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Matrix plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@1.2.0/dist/chartjs-chart-matrix.min.js"></script>
 
     <script src="script.js"></script>
 </body>
 
 </html>
-
-<!-- uvicorn app:app --reload --host 0.0.0.0 --port 8000 -->
-<!-- uvicorn app:app --reload --host 127.0.0.1 --port 8000 -->
