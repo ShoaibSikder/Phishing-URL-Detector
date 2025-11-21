@@ -1,4 +1,4 @@
-# Hybrid Phishing URL Detector
+# Phishing URL Detector
 
 ![Project Screenshot](./frontend/image.png)  
 _Screenshot of the project interface._
