@@ -1,4 +1,4 @@
-# Hybrid Phishing URL Detector
+# Phishing URL Detector
 
 ![Project Screenshot](./frontend/image.png)  
 _Screenshot of the project interface._
@@ -72,8 +72,7 @@ The dataset is preprocessed to train the ML model used in this project.
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/<your-username>/Hybrid-Phishing-URL-Detector.git
-cd Hybrid-Phishing-URL-Detector
+https://github.com/ShoaibSikder/Phishing-URL-Detector.git
 ```
 
 2. **Set up Python environment:**
@@ -119,7 +118,7 @@ uvicorn backend.app:app --reload --port 8000
 
 ```json
 {
-  "url": "https://example.com/login"
+  "url": "https://google.com/login"
 }
 ```
 
@@ -151,7 +150,7 @@ uvicorn backend.app:app --reload --port 8000
 
 ## Results & Accuracy
 
-- **Model Accuracy:** ~90.5% (replace with your actual model results)
+- **Model Accuracy:** ~90.5%
 - Confusion matrix, ROC curve, and precision-recall analysis can be generated in the backend for evaluation.
 
 ---
